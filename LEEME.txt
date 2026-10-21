@@ -1,5 +1,7 @@
 FELIZ DÍA, MAMI — DE KORA PARA RENATA
-Página personal / copia local (sin publicar)
+Página personal
+Publicada en: https://manuxxaitos.github.io/korita-bububu/
+Repositorio: https://github.com/manuxxaitos/korita-bububu (GitHub Pages desde main)
 
 ABRIR
 Doble clic en «Abrir.command».
@@ -104,5 +106,4 @@ y IMG_3282 (panza afeitada). IMG_8330 (papá con Kora) se sacó a pedido. Todas 
 PENDIENTES / A VALIDAR
 - «Papá» aparece en el ranking y en los mensajes de la compu (abajo del escritorio de papá).
 - «Los vomititos», «los días del pañal»: confirmar que caen bien.
-Sin publicar. Para mandársela a Renata hay que subirla (por ejemplo GitHub Pages o Netlify) o
-abrirla en esta compu. Pesa unos 28 MB (sobre todo los videos).
+Publicada con GitHub Pages: cada «git push» a main actualiza el link en uno o dos minutos.
