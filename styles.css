@@ -683,5 +683,46 @@ main::before{left:0}main::after{right:0;transform:scaleX(-1)}
   .gate-title{font-size:28px}
 }
 
+/* ============ Celular: rendimiento, zonas seguras y ajustes finos ============ */
+@media (max-width:760px){
+  /* El grano animado con mezcla y los vidrios esmerilados recalculan toda la pantalla: en el celular van fijos. */
+  body::after{animation:none;mix-blend-mode:normal;opacity:.045}
+  .vellum,.vellum-scrap{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(250,250,247,.88)}
+  .gate::after{display:none}
+  /* Con el dedo sobre la pata 3D la página igual baja: solo el gesto horizontal la gira. */
+  .pollo-hit{touch-action:pan-y}
+  .index-about{font-size:14px}
+  .pill-label{font-size:19px;text-align:center;border-radius:16px;padding:8px 16px 7px;line-height:1.1}
+  .pill-label span{display:block;font-size:14px;margin-top:2px}
+  /* De paseo: la tira de negativos ocupa todo lo que queda de pantalla. */
+  .walks>.walks-sticky{align-content:stretch;grid-template-rows:auto minmax(0,1fr);gap:14px;padding:calc(18px + env(safe-area-inset-top)) 0 calc(26px + env(safe-area-inset-bottom))}
+  .walks .copy{padding:16px 16px 14px}
+  .walks .film{height:auto;min-height:0;max-height:none}
+  .walks .poster-bg{object-position:30% 18%}
+  /* Botón de música: solo el casete, en la esquina. */
+  .music-toggle{right:10px;bottom:calc(10px + env(safe-area-inset-bottom));padding:7px;gap:0;rotate:-4deg}
+  .music-toggle .mt-label{display:none}
+  /* Zonas seguras del iPhone (isla y barra de inicio) en la pantalla del juego. */
+  .gate-hud{top:calc(12px + env(safe-area-inset-top))}
+  .game-canvas{height:calc(100% - env(safe-area-inset-bottom))}
+  .gate-card{bottom:calc(12px + env(safe-area-inset-bottom))}
+  .gate-load{bottom:calc(5px + env(safe-area-inset-bottom))}
+  .mute{bottom:calc(4px + env(safe-area-inset-bottom))}
+  .end{padding-bottom:calc(90px + env(safe-area-inset-bottom))}
+  /* Fotomatón en 2 × 2 en vez de una tira larguísima. */
+  .booth{grid-template-columns:1fr 1fr;width:min(80vw,320px);gap:8px;padding:10px 10px 8px}
+  .booth-foot{grid-column:1/-1}
+}
+/* Celular acostado: la tarjeta del juego se achica para entrar. */
+@media (max-height:500px) and (orientation:landscape){
+  .gate-card{top:50%;bottom:auto;translate:-50% -50%;width:min(78vw,560px);max-height:92svh;overflow:auto;padding:16px 20px 12px}
+  .gate-card .rules,.gate-card .controls{display:none}
+  .gate-title{font-size:26px;margin:2px 0 6px}
+  .gate-text{font-size:18px;margin-bottom:10px}
+  .btn-big{min-height:46px;font-size:15px;padding:10px 28px 9px}
+  .gate-hud{top:8px}
+  .slot{width:30px;height:20px}
+}
+
 /* ============ Impresión ============ */
 @media print{.gate,.pollo-canvas,.chase-canvas,body::after,.sound-toggle{display:none!important}.walks{height:auto}.walks-sticky{position:static;height:auto}.film-track{position:static;flex-wrap:wrap}}

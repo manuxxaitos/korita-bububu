@@ -75,6 +75,19 @@ melodía cromática y ticks), sintetizada en vivo con Web Audio en music.js; no 
 Arranca con el primer toque (por ejemplo «Jugar»). El botón «sonido» del juego y el casete de abajo
 a la derecha la prenden y apagan (se recuerda la elección). Baja sola cuando se le da sonido a un video.
 
+CELULAR
+Cada foto tiene una versión liviana (-sm.webp, 1000 px; stickers 520 px; fondos 1100 px) y el celular
+baja esa sola (srcset). La carga en celular pasó de unos 16 MB a 5,5 MB, y no decodifica todas las fotos
+de golpe (en iPhone eso puede agotar la memoria). Las fotos fuera de la primera pantalla cargan diferido.
+En celular el grano va fijo y sin mezcla, y el papel de calco no usa vidrio esmerilado (en un teléfono
+real recalculan la pantalla entera en cada scroll). La persecución solo se redibuja si algo se movió.
+Zonas seguras del iPhone (isla y barra de inicio) en el juego y al final. Celular acostado: la tarjeta
+del juego se compacta. Con el dedo sobre la pata 3D la página igual baja; el giro es horizontal.
+Fotomatón en 2 × 2, tira de negativos a pantalla completa en «De paseo», casete de música chiquito.
+Audio en iPhone: se activa con cualquier toque completo y suena aunque el teléfono esté en silencio
+(iOS 17 o más). Probado en 360×740, 390×844, 430×932 y 844×390 (acostado).
+Si se cambian o agregan fotos: python3 tools/prepare_assets.py photos small && python3 tools/responsive_html.py
+
 INTERACCIÓN
 Sin barra superior ni índice. AvPág / → avanza de lámina, RePág / ← retrocede.
 Los videos se reproducen mudos al verse; el botón «sonido» le da sonido a uno solo.

@@ -12,6 +12,13 @@ const params = new URLSearchParams(location.search);
 const loading = window.koraLoading;
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 const STORE = 'kora-regalo-abierto';
+const small = matchMedia('(max-width: 760px)');
+// Las fotos que se cambian por código usan la versión liviana (-sm) en el celular.
+function setPhoto(img, src) {
+  img.removeAttribute('srcset');
+  img.removeAttribute('sizes');
+  img.src = small.matches ? src.replace(/\.webp$/, '-sm.webp') : src;
+}
 const music = createMusic();
 const state = {paused: reduced, pollo: null, gateOpen: true};
 
@@ -123,8 +130,17 @@ function paintSound() {
 }
 paintSound();
 // La música arranca con el primer toque (los navegadores no dejan sonar antes).
-addEventListener('pointerdown', () => { game.sound.wake(); if (!music.muted) music.start(); }, {once: true, capture: true});
-addEventListener('keydown', () => { game.sound.wake(); if (!music.muted) music.start(); }, {once: true, capture: true});
+// iPhone solo deja arrancar el audio en un toque completo (touchend/click), no al apoyar el dedo:
+// se escucha en todos y se suelta cuando el audio ya está corriendo.
+// audioSession «playback» hace que suene aunque el teléfono esté en silencio (iOS 17+).
+try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch {}
+const unlockEvents = ['pointerdown', 'touchend', 'click', 'keydown'];
+function unlockAudio() {
+  game.sound.wake();
+  if (!music.muted) music.start();
+  if (game.sound.ctx?.state === 'running') unlockEvents.forEach(type => removeEventListener(type, unlockAudio, true));
+}
+unlockEvents.forEach(type => addEventListener(type, unlockAudio, {capture: true, passive: true}));
 $('#music-toggle').addEventListener('click', () => music.setMuted(!music.muted));
 
 if (params.has('test')) window.__koraTarget = () => game.nextPollo();
@@ -249,7 +265,7 @@ for (const tc of $$('[data-timecode]')) {
     mounts.forEach(m => { m.classList.toggle('is-on', m === mount); m.setAttribute('aria-pressed', String(m === mount)); });
     view.classList.add('is-changing');
     setTimeout(() => {
-      img.src = mount.dataset.src;
+      setPhoto(img, mount.dataset.src);
       img.alt = mount.dataset.alt;
       cap.textContent = mount.dataset.cap;
       view.classList.remove('is-changing');
@@ -308,7 +324,7 @@ for (const tc of $$('[data-timecode]')) {
       win.innerHTML = `<header><button type="button" class="win-close"></button><span></span></header><img width="1125" height="1500" alt=""><footer></footer>`;
       $('.win-close', win).setAttribute('aria-label', `Cerrar ${icon.textContent}`);
       $('span', win).textContent = icon.textContent;
-      $('img', win).src = `assets/img/${icon.dataset.img}.webp`;
+      setPhoto($('img', win), `assets/img/${icon.dataset.img}.webp`);
       $('img', win).alt = icon.dataset.alt;
       $('footer', win).textContent = icon.dataset.cap;
       desktop.append(win);

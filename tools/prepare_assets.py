@@ -133,7 +133,26 @@ def posters():
         print('poster', name, im.size)
 
 
+
+
+def small():
+    """Versiones livianas para celular (-sm): fotos 1000 px, stickers 520 px, fondos 1100 px."""
+    count = 0
+    for path in sorted(IMG.glob('*.webp')):
+        if path.stem.endswith('-sm'):
+            continue
+        im = Image.open(path)
+        limit = 520 if path.stem.startswith('sticker-') else 1100 if path.stem.startswith('poster-') else 1000
+        if max(im.size) <= limit:
+            continue
+        im = im.copy()
+        im.thumbnail((limit, limit), Image.LANCZOS)
+        im.save(IMG / f'{path.stem}-sm.webp', 'WEBP', quality=74, method=6)
+        count += 1
+    print('livianas', count)
+
+
 if __name__ == '__main__':
-    steps = sys.argv[1:] or ['photos', 'cutouts', 'videos', 'posters']
+    steps = sys.argv[1:] or ['photos', 'cutouts', 'videos', 'posters', 'small']
     for step in steps:
         globals()[step]()

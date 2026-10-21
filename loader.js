@@ -3,7 +3,16 @@
 (() => {
   const number = document.querySelector('#load-number'), progress = document.querySelector('#load-progress');
   const bar = document.querySelector('#load-bar');
-  const urls = [...new Set([...document.images].map(image => image.currentSrc || image.src))];
+  // Cada foto se pide con su mismo srcset/sizes: el navegador elige la versión liviana en el celular
+  // y la grande en la compu, y después la reusa desde la caché.
+  const sources = new Map();
+  for (const image of document.images) {
+    const key = image.getAttribute('srcset') || image.getAttribute('src');
+    if (key && !sources.has(key)) sources.set(key, {src: image.getAttribute('src'), srcset: image.getAttribute('srcset'), sizes: image.getAttribute('sizes')});
+  }
+  const urls = [...sources.keys()];
+  // En pantallas chicas no se decodifican todas de golpe (en iPhone eso puede agotar la memoria).
+  const decodeAll = matchMedia('(min-width: 1100px)').matches;
   const tasks = new Map([...urls, 'fonts', 'pollo', 'layout'].map(key => [key, false]));
   const failures = [], listeners = new Set();
   let target = 0, value = 0, last = performance.now(), frame = 0, done = false;
@@ -53,14 +62,16 @@
     get done() { return done; },
     onChange(fn) { listeners.add(fn); fn(Math.floor(value)); }
   };
-  for (const url of urls) {
-    track(url, new Promise((resolve, reject) => {
+  for (const [key, {src, srcset, sizes}] of sources) {
+    track(key, new Promise((resolve, reject) => {
       const image = new Image();
-      image.onload = () => image.decode().then(resolve, resolve);
-      image.onerror = () => reject(new Error('No se pudo cargar ' + url));
-      image.src = url;
+      image.onload = () => decodeAll ? image.decode().then(resolve, resolve) : resolve();
+      image.onerror = () => reject(new Error('No se pudo cargar ' + src));
+      if (sizes) image.sizes = sizes;
+      if (srcset) image.srcset = srcset;
+      image.src = src;
     }));
   }
-  track('fonts', Promise.all(['40px Schoolbell', '40px "Instrument Serif"', 'italic 40px "Instrument Serif"', '700 20px "Bricolage Grotesque"', '20px VT323', '26px "Nanum Pen Script"', '20px Delius', '20px "Homemade Apple"']
+  track('fonts', Promise.all(['40px Schoolbell', '700 20px "Bricolage Grotesque"', '20px VT323', '26px "Nanum Pen Script"', '20px Delius', '20px "Homemade Apple"']
     .map(font => document.fonts.load(font))).then(() => document.fonts.ready));
 })();

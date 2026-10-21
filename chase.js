@@ -61,8 +61,13 @@ export function createChase({canvas, sheets, reducedMotion = false}) {
     return from + (to - from) * t;
   }
 
+  let lastKey = '';
   function frame(now) {
     requestAnimationFrame(frame);
+    // Solo se redibuja si cambió el scroll o el cuadro del trazo (8 por segundo), o mientras laten los corazones.
+    const key = `${Math.round(scrollY)}|${Math.floor(now / 125)}|${W}|${state.enabled}`;
+    if (key === lastKey && !state.caught) return;
+    lastKey = key;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, W, H);
     if (!state.enabled || !lanes.length) return;
