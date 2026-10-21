@@ -1,0 +1,108 @@
+FELIZ DÍA, MAMI — DE KORA PARA RENATA
+Página personal / copia local (sin publicar)
+
+ABRIR
+Doble clic en «Abrir.command».
+Alternativa desde esta carpeta: python3 preview.py
+Dirección: http://localhost:8867/
+Hay que servirla por HTTP: abrir index.html con file:// no carga los módulos ni la pata 3D.
+Atajos: http://localhost:8867/?regalo salta el juego y abre el regalo directo (útil para revisar).
+
+LA IDEA
+Una carta que escribe Kora (la Bubu, Korita) a su mami, armada como un proyecto sobre el escritorio
+de una arquitecta: toda la página es una plancha de corte verde con cuadrícula y regla, siempre igual,
+y encima van láminas crema con cinta. Rótulo de plano en la portada, cotas en «Crecí», escuadra y lápiz.
+Fotos en polaroids con fecha naranja estampada; el mar y los paseos, en foto posterizada con papel de
+calco y figuritas de palitos (mami y Kora). Dibujitos en tinta, celeste moteado, terracota y amarillo.
+Referencias: «Sofa» (título a mano y recuadro de birome verde), eggsinn, Lumen Cat, las planchas de corte
+de Pinterest y el afiche de paisaje posterizado.
+
+COLLAGE EN LA MESA DE TRABAJO
+Sobre toda la plancha hay papelitos pegados que asoman desde los costados de las láminas: post-its con
+notas de Kora, la lista «HOY» en hoja de cuaderno arrancada, tickets (Pollería de mami, Agrado),
+estampillas de correo con fotos de Kora y matasellos, fotos rasgadas con cinta washi, papel de calco,
+tarjeta cuadriculada, stickers, clips, curita, flores y manchas de tinta. Encima de las fotos hay
+anotaciones a mano (letra Nanum Pen Script): líneas de construcción que pasan las esquinas, flechas,
+palabras encerradas en círculo y dibujitos con epígrafe. En el celular algunos papelitos pasan al
+final de cada lámina y el resto se esconde para no tapar el texto.
+
+KORA PERSIGUE AL POLLITO
+Mientras se baja, Kora (dibujada de perfil, corriendo) persigue una patita de pollito con piernas por
+los pasillos verdes que quedan entre lámina y lámina, en zigzag, y deja huellas. El pollito va adelante,
+cada vez más cerca. Al llegar al final de la página lo agarra: queda con la pata en la boca, corazoncitos
+y la nota «¡lo agarré!».
+Mientras corren suenan los pasitos «pipipipi» de dibujito: Kora alterna dos notas a ritmo de sus patas
+(más rápido cuanto más rápido se baja) y el pollito hace pasitos más agudos. Quietos, no suenan.
+
+EL JUEGO (pantalla de carga)
+Space Invaders al revés: Kora, dibujada en 2D (ojo marrón y ojo celeste, como ella), no dispara, come.
+Arriba marcha la formación de cosas que no le gustan (zanahorias, brócoli, croquetas, bolsas de
+balanceado y parasititos) y las va tirando. Un pollito asado con alitas cruza volando y suelta patitas.
+Cinco patitas y se abre el regalo. Si le cae algo feo: «¡PUAJ!» y queda mareada un segundo (no pierde).
+Mientras se juega, abajo corre la carga real de los recuerdos (0–100%). El botón «Abrir tu regalo»
+espera a que esté todo. Se juega con ← → o el mouse; en el celular, arrastrando el dedo.
+También se puede saltar. Si ya ganó una vez, al volver le pregunta si juega otra vez o va directo.
+
+RECORRIDO (13 láminas, fotos ordenadas por fecha)
+00 Portada: «Feliz día, mami.», polaroid de Renata con Kora cachorrita, sello «aprobado por Kora», rótulo.
+01 Mi nombre: el nombre completo en un troquel y el «Índice de nombres de la casa».
+02 Llegué (agosto 2025): filmadora con REC, polaroids y una que se mueve (video).
+03 Primeras veces: tele «Koravisión» (mi primer ladrido, la escoba, el sillón) y seis «mi primer…».
+04 El pollito: la pata de pollito 3D (se gira y salta) y un solo cuadro «Hecho por Korita Bububu»
+   con lo que ama (pollito, mami, chipacito…) y lo que no (tachado).
+05 El mar (enero 2026): playa posterizada, papel de calco con las tres fotos.
+06 Mi casa: «Kora OS» a pantalla completa; Kora escribe mensajes en la compu (aparecen de a uno),
+   ventanas que se arrastran y carpeta con 31 fotos.
+07 Lo que aguantó: cuaderno abierto, hoja kraft pegada con fotos y lista en birome de colores.
+08 Agrado: las dos fotos en la vidriera buscando chipacito, diciembre 2025 = junio 2026.
+09 Mami me cuidó (julio 2026): la vete, el cono, el body y el video de los mimos.
+10 De paseo: parque posterizado y tira de negativos que corre con el scroll.
+11 Crecí: agosto 2025 → julio 2026, con cotas («1 mano» y «1 abrazo entero»).
+12 La carta: corta, manchada de pollito, migas, patitas y un mordisco; «Vení a visitarme siempre que
+   quieras». La pata de regalo, la firma con el nombre completo y la zona para firmar con patitas.
+
+REGLAS DE TEXTO Y TIPOGRAFÍA
+Kora nunca dice «mamá» ni «vos»: dice «mami». El pollo siempre es «pollito». «La vete», no «el vete».
+Títulos: una sola tipografía (Delius, terracota); la segunda línea va en negro, siempre en su propia línea.
+Todo lo que dice Kora va con su letra a mano (Schoolbell). Notitas en cursiva (Homemade Apple) con
+recuadro de birome verde. Etiquetas y botones en Bricolage Grotesque.
+
+MÚSICA
+Canción de fondo original estilo «sneaky pixel»: chiptune de puntitas en la menor (bajo staccato,
+melodía cromática y ticks), sintetizada en vivo con Web Audio en music.js; no hay archivo de audio.
+Arranca con el primer toque (por ejemplo «Jugar»). El botón «sonido» del juego y el casete de abajo
+a la derecha la prenden y apagan (se recuerda la elección). Baja sola cuando se le da sonido a un video.
+
+INTERACCIÓN
+Sin barra superior ni índice. AvPág / → avanza de lámina, RePág / ← retrocede.
+Los videos se reproducen mudos al verse; el botón «sonido» le da sonido a uno solo.
+Respeta «reducir movimiento» del sistema. Funciona en celular (probado en 390×844).
+
+ARCHIVOS
+index.html: textos y estructura (los textos se editan acá).
+styles.css: diseño, objetos vintage, juego, índice, móvil y movimiento reducido.
+app.js: director: juego → regalo, videos, tele, fotos del mar, mensajes y ventanas de la compu, negativos, patitas.
+game.js: el minijuego. kora-draw.js: los dibujos a mano (Kora de frente y corriendo, comida, pollito).
+chase.js: la persecución de Kora y el pollito por la plancha.
+music.js: la canción de fondo.
+pollo3d.js: la pata de pollo en Three.js (sombreado en tres tonos y contorno de tinta).
+loader.js: carga real. preview.py / Abrir.command: servidor local.
+assets/img: fotos preparadas (webp, tono cálido), stickers recortados de Kora, fondos posterizados
+        (poster-mar, poster-parque) y la textura moteada (speckle.png).
+assets/video: videos comprimidos (540×960) con su primer cuadro.
+assets/fonts: Delius, Bricolage Grotesque, VT323, Nanum Pen Script (OFL), Schoolbell y Homemade Apple (Apache).
+assets/vendor: Three.js (MIT).
+tools/prepare_assets.py: regenera fotos, stickers (Vision de macOS, tools/cutout.swift) y videos
+        y fondos posterizados desde «../kora bubu». Los originales no se modifican.
+        Uso: python3 tools/prepare_assets.py
+tools/render_icons.html: genera favicon, ícono y la pata 2D de respaldo con los mismos dibujos.
+
+FOTOS QUE NO ENTRARON
+Cuatro fotos de Kora haciendo sus necesidades en la calle (098B8A13, IMG_1134, IMG_4248, IMG_5125)
+y IMG_3282 (panza afeitada). IMG_8330 (papá con Kora) se sacó a pedido. Todas las demás están en algún capítulo o en la carpeta de la compu.
+
+PENDIENTES / A VALIDAR
+- «Papá» aparece en el ranking y en los mensajes de la compu (abajo del escritorio de papá).
+- «Los vomititos», «los días del pañal»: confirmar que caen bien.
+Sin publicar. Para mandársela a Renata hay que subirla (por ejemplo GitHub Pages o Netlify) o
+abrirla en esta compu. Pesa unos 28 MB (sobre todo los videos).
