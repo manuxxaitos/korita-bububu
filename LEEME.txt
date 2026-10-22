@@ -30,8 +30,8 @@ final de cada lámina y el resto se esconde para no tapar el texto.
 
 KORA PERSIGUE AL POLLITO
 Mientras se baja, Kora (dibujada de perfil, corriendo) persigue una patita de pollito con piernas por
-los pasillos verdes que quedan entre lámina y lámina, en zigzag, y deja huellas. El pollito va adelante,
-cada vez más cerca. Al llegar al final de la página lo agarra: queda con la pata en la boca, corazoncitos
+los pasillos verdes que quedan entre lámina y lámina, en zigzag, y deja huellas. El pollito corre pegadito
+adelante desde el principio (un cuerpo y medio de Kora, uno al final). Al llegar al final de la página lo agarra: queda con la pata en la boca, corazoncitos
 y la nota «¡lo agarré!».
 Mientras corren suenan los pasitos «pipipipi» de dibujito: Kora alterna dos notas a ritmo de sus patas
 (más rápido cuanto más rápido se baja) y el pollito hace pasitos más agudos. Quietos, no suenan.
@@ -68,6 +68,7 @@ RECORRIDO (14 láminas, fotos ordenadas por fecha)
    «¡Mucha suerte en las entregas, mami!». Abajo, sobre la plancha, Kora alcanza al pollito.
 
 REGLAS DE TEXTO Y TIPOGRAFÍA
+Sin referencias a Kora esperando a mami (en la puerta, «cuando mami vuelva», etc.).
 Kora nunca dice «mamá» ni «vos»: dice «mami». El pollo siempre es «pollito». «La vete», no «el vete».
 Títulos: una sola tipografía (Delius, terracota); la segunda línea va en negro, siempre en su propia línea.
 Todo lo que dice Kora va con su letra a mano (Schoolbell). Notitas en cursiva (Homemade Apple) con

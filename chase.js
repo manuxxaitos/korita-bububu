@@ -83,7 +83,10 @@ export function createChase({canvas, sheets, reducedMotion = false}) {
     if (!caught) state.caught = false;
 
     // El pollito va adelante; la distancia se achica hasta cero en el último pasillo.
-    const lead = caught ? 0 : 0.42 * Math.pow(1 - g / total, 0.7) + 0.06 * clamp(total - 1 - g);
+    // El pollito corre pegadito adelante: un cuerpo y medio de Kora al principio, uno al final,
+    // y en el último cuarto del tramo final se deja alcanzar.
+    const closing = clamp((total - g) / 0.25);
+    const lead = caught ? 0 : (u * (1.5 - 0.5 * g / total) / (W * 1.16)) * closing;
     const p = Math.min(total - 0.0001, g + lead);
 
     // Rastro de huellas en los pasillos que Kora ya recorrió.
@@ -121,7 +124,7 @@ export function createChase({canvas, sheets, reducedMotion = false}) {
       const pLane = lanes[pi];
       let px = laneX(pi, pt), pdir = pi % 2 === 0 ? 1 : -1;
       // En el último tramo el pollito se frena adelante de Kora hasta que ella lo alcanza.
-      if (pLane.final) px += pdir * u * 1.1 * clamp(lead / 0.08);
+      if (pLane.final) px += pdir * u * 1.1 * closing;
       const py = pLane.y - scrollY + u * 0.5;
       if (!state.paused) polloPhase += still ? 0.08 : Math.abs(dx) * 0.06 + 0.1;
       if (polloPhase - polloStep > Math.PI * 4) polloStep = polloPhase - Math.PI;
