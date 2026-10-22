@@ -45,7 +45,7 @@ Mientras se juega, abajo corre la carga real de los recuerdos (0–100%). El bot
 espera a que esté todo. Se juega con ← → o el mouse; en el celular, arrastrando el dedo.
 También se puede saltar. Si ya ganó una vez, al volver le pregunta si juega otra vez o va directo.
 
-RECORRIDO (13 láminas, fotos ordenadas por fecha)
+RECORRIDO (14 láminas, fotos ordenadas por fecha)
 00 Portada: «Feliz día, mami.», polaroid de Renata con Kora cachorrita, sello «aprobado por Kora», rótulo.
 01 Mi nombre: el nombre completo en un troquel y el «Índice de nombres de la casa».
 02 Llegué (agosto 2025): filmadora con REC, polaroids y una que se mueve (video).
@@ -62,6 +62,10 @@ RECORRIDO (13 láminas, fotos ordenadas por fecha)
 11 Crecí: agosto 2025 → julio 2026, con cotas («1 mano» y «1 abrazo entero»).
 12 La carta: corta, manchada de pollito, migas, patitas y un mordisco; «Vení a visitarme siempre que
    quieras». La pata de regalo, la firma con el nombre completo y la zona para firmar con patitas.
+13 P.D.: la carta está hecha como las entregas que mami hace en la facultad. Kora admira cómo estudia
+   y quiere ser arquitecta como ella, pero de casitas para perritos: su «Proyecto 01» con vista frontal,
+   planta, cotas («1 Kora de alto», «3 pollitos de ancho»), rótulo y sello «Aprobado: mami». Post-it:
+   «¡Mucha suerte en las entregas, mami!». Abajo, sobre la plancha, Kora alcanza al pollito.
 
 REGLAS DE TEXTO Y TIPOGRAFÍA
 Kora nunca dice «mamá» ni «vos»: dice «mami». El pollo siempre es «pollito». «La vete», no «el vete».

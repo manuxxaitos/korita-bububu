@@ -602,12 +602,74 @@
           <div id="stamp-zone" class="stamp-zone" aria-label="Zona para firmar con patitas"><span class="hand">tocá acá para firmar con mi patita</span></div>
         </article>
       </div>
+    </section>
+
+    <!-- ============ 13 P.D.: la entrega ============ -->
+    <section id="posdata" class="scene sheet entrega" data-chapter="P.D.">
+      <div class="copy">
+        <h2 class="display" data-in>P.D.:<br>la hice como<em>las entregas de mami.</em></h2>
+        <p class="lead" data-in>Con láminas, rótulo, cotas y mucha cinta, como los trabajos que mami hace para la facultad.</p>
+        <p class="lead" data-in>Admiro un montón cómo estudia mami. Cuando sea grande quiero ser arquitecta como ella…</p>
+        <p class="pd-punch" data-in>…pero de casitas para perritos.</p>
+        <div class="sticky wish" data-in><span class="washi washi-dots" style="top:-12px;left:26%;--r:-5deg"></span><p class="pen">¡Mucha suerte en las entregas, mami!</p><p class="pen small-pen">yo acompaño desde abajo del escritorio, como siempre</p></div>
+      </div>
+      <div class="plano" data-in>
+        <span class="washi" style="top:-12px;left:10%;--r:-8deg" aria-hidden="true"></span>
+        <p class="plano-title">Proyecto 01 · Casita para perritos</p>
+        <svg class="elev" viewBox="0 0 420 370" role="img" aria-label="Vista frontal de una casita para perritos dibujada por Kora, con cotas: de alto, una Kora; de ancho, tres pollitos.">
+          <path class="thin" d="M8 322H412"/>
+          <path d="M100 322V176L210 92L320 176V322Z"/>
+          <path class="roof" d="M78 190L210 74L342 190"/>
+          <path d="M170 322V262a40 40 0 0 1 80 0V322"/>
+          <rect x="182" y="140" width="56" height="24" rx="3"/>
+          <text x="210" y="157" class="sign">KORA</text>
+          <path class="heart" d="M210 122c-6-5-10-8-10-12 0-3 3-5 5-5 2 0 4 1 5 3 1-2 3-3 5-3 2 0 5 2 5 5 0 4-4 7-10 12Z"/>
+          <path d="M120 300h30M120 288h22M290 300h-30M290 288h-22" class="thin"/>
+          <path d="M332 322c0-16 52-16 52 0Z"/>
+          <use href="#d-drum" x="330" y="286" width="52" height="30" class="drum" style="fill:#cf8343"/>
+          <path class="cota" d="M44 92V322M36 92h16M36 322h16"/>
+          <text x="30" y="210" class="cota-t" transform="rotate(-90 30 210)">1 Kora de alto</text>
+          <path class="cota" d="M100 350H320M100 342v16M320 342v16"/>
+          <text x="210" y="344" class="cota-t">3 pollitos de ancho</text>
+          <text x="398" y="250" class="note-t" transform="rotate(90 398 250)">techo para la lluvia</text>
+        </svg>
+        <p class="plano-cap">Vista frontal · esc. 1 : 1 perro</p>
+        <div class="plano-row">
+          <div class="planta-wrap">
+            <svg class="planta" viewBox="0 0 300 230" role="img" aria-label="Planta de la casita: cama, plato de pollito y la puerta.">
+              <path d="M24 24H276V206H174M126 206H24Z"/>
+              <path class="thin" d="M34 34H266V196H174M126 196H34Z"/>
+              <path class="thin" d="M126 206a48 48 0 0 1 48-48" stroke-dasharray="4 5"/>
+              <ellipse cx="96" cy="92" rx="48" ry="34"/>
+              <text x="96" y="97" class="room-t">cama (mía)</text>
+              <circle cx="222" cy="78" r="22"/>
+              <text x="222" y="120" class="room-t">pollito</text>
+              <use href="#d-drum" x="206" y="68" width="32" height="20" class="drum" style="fill:#cf8343"/>
+              <text x="150" y="160" class="room-t soft">acá espero a mami</text>
+            </svg>
+            <p class="plano-cap">Planta</p>
+          </div>
+          <div class="rotulo rotulo-pd">
+            <dl>
+              <div><dt>Proyecto</dt><dd>Casita para perritos</dd></div>
+              <div><dt>Arquitecta</dt><dd>Korita (en formación)</dd></div>
+              <div><dt>Inspiración</dt><dd>Mami</dd></div>
+              <div><dt>Entrega</dt><dd>cuando mami vuelva</dd></div>
+            </dl>
+          </div>
+        </div>
+        <span class="sello" aria-hidden="true">Aprobado<br><b>mami</b></span>
+      </div>
+    </section>
+
+    <!-- Final sobre la plancha: acá Kora alcanza al pollito. -->
+    <div class="finale">
       <div class="chase-end" aria-live="polite"><p class="note"><span class="scribble">¡lo agarré!</span></p></div>
       <footer class="end">
         <button id="play-again" class="btn" type="button">Volver a jugar</button>
         <a class="btn btn-ghost" href="#portada">Volver arriba</a>
       </footer>
-    </section>
+    </div>
   </main>
 
   <noscript><style>.gate,.pollo-canvas,.chase-canvas{display:none!important}html.is-loading{overflow:auto}.is-loading main{visibility:visible}</style></noscript>
